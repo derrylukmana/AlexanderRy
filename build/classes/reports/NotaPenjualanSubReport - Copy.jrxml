@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="NotaPenjualanSubReport" language="groovy" pageWidth="555" pageHeight="802" columnWidth="451" leftMargin="0" rightMargin="104" topMargin="0" bottomMargin="0" uuid="4a8ac1b9-b6c3-468a-8716-c75c68867016">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="id_penjualan" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select t_produk.nama, t_detail_penjualan.kuantitas, t_detail_penjualan.harga, t_detail_penjualan.sub_total from t_detail_penjualan, t_produk where t_produk.id_produk = t_detail_penjualan.id_produk and t_detail_penjualan.id_penjualan=$P{id_penjualan}]]>
+	</queryString>
+	<field name="nama" class="java.lang.String"/>
+	<field name="kuantitas" class="java.lang.Integer"/>
+	<field name="harga" class="java.math.BigDecimal"/>
+	<field name="sub_total" class="java.math.BigDecimal"/>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement uuid="75ebdc39-560c-4b50-b7ef-dbfe3f004af1" x="0" y="0" width="150" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0">
+				<reportElement uuid="434c3a50-40cc-4910-b3ed-df0bef04db42" x="150" y="0" width="86" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{kuantitas}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0">
+				<reportElement uuid="d0ae1247-b8f5-4845-aa36-99627334b8eb" x="236" y="0" width="96" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{harga}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0">
+				<reportElement uuid="0cfa5f14-f354-40d2-872e-e1a6f834198f" x="332" y="0" width="119" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{sub_total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
