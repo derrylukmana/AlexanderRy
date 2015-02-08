@@ -52,10 +52,10 @@ public class AboutDialog extends javax.swing.JDialog {
         setResizable(false);
 
         aerithLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        aerithLabel1.setText("Azzwars Point Of Sales");
+        aerithLabel1.setText("AlexanderRy ");
         aerithLabel1.setVerifyInputWhenFocusTarget(false);
 
-        labelImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/azzwars.jpeg"))); // NOI18N
+        labelImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/LogoAlexanderRy.jpg"))); // NOI18N
 
         aerithLabel2.setText("Develop & Customize by:");
         aerithLabel2.setFont(new java.awt.Font("Default", 1, 14)); // NOI18N

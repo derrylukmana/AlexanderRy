@@ -444,7 +444,7 @@ public class FrameUtama extends javax.swing.JFrame {
         menuHelp.add(menuHelpAbout);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Azzwars Perfume Point Of Sales");
+        setTitle("AlexanderRy Point Of Sales");
 
         aerithContentPanel1.setLayout(new java.awt.BorderLayout());
 
