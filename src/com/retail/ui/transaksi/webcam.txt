@@ -1,0 +1,13 @@
+		webcam = Webcam.getWebcams().get(0);
+        webcam.setViewSize(size);
+        panel = new WebcamPanel(webcam);
+		gridBagConstraints.gridx = 80;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridheight = 16;
+		gridBagConstraints.gridwidth = 40;
+		gridBagConstraints.ipadx = 400;
+		gridBagConstraints.weighty = 1.0;
+		gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.FIRST_LINE_END;
+  		panelGlass1.add(panel, gridBagConstraints);
